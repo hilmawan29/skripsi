@@ -37,7 +37,7 @@
                     <?php } ?>
                 </div>
             </div>
-            <button type="submit" class="btn btn-danger">Update</button>
+            <button type="submit" class="btn btn-danger">Perbaharui</button>
             </form>
 
         </div>

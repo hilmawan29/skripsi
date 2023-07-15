@@ -42,7 +42,7 @@
                  <option <?php if($patient ['conclusion_from_dokter'] == "Rawat Inap"){ echo "selected='selected'";} ?> value="Rawat Inap">Rawat Inap</option>
             </select>
              <?php }else{ ?>
-            <label>Conclusion : </label>
+            <label>Hasil : </label>
             <select class="form-control" id="conclusion" name="conclusion">
                  <option <?php if($patient ['conclusion'] == "Beri Obat"){ echo "selected='selected'";} ?> value="Beri Obat">Beri Obat</option>
                  <option <?php if($patient ['conclusion'] == "Istirahat"){ echo "selected='selected'";} ?> value="Istirahat">Istirahat</option>
@@ -51,5 +51,5 @@
                  <?php } ?>
             <?= form_error('conclusion', '<small class="text-danger pl-3">', '</small>'); ?>
         </div>
-    <button type="submit" class="btn btn-danger">Update Patient Data</button>
+    <button type="submit" class="btn btn-danger">Perbaharui Data Pasien</button>
 </div>

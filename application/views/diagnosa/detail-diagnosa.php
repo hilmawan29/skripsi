@@ -53,13 +53,13 @@
             <div> <?= $patient['drugs']; ?></div>
         </div>
         <div class="form-group">
-            <label for="conclusion">Conclusion</label>
+            <label for="conclusion">Hasil</label>
                 <div> <?= $patient['conclusion']; ?></div>
         </div>
         <div class="form-group">
             <label for="conclusion_from_dokter">Conclusion From Dokter</label>
                 <div> <?= $patient['conclusion_from_dokter']; ?></div>
         </div>
-        <a class="btn btn-danger" href="<?= base_url('diagnosa'); ?>">Back</a>
+        <a class="btn btn-danger" href="<?= base_url('diagnosa'); ?>">Kembali</a>
     </form>
 </div>

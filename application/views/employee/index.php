@@ -10,17 +10,17 @@
                     	<div class="col-xl">
                     		<?= form_error('menu', '<div class="alert alert-danger" role="alert">','</div>'); ?>
                     		<?= $this->session->flashdata('message'); ?>
-                    		<a href="" class="btn btn-danger mb-3" data-toggle="modal" data-target="#newEmployeeModal">Add New Employee</a>
+                    		<a href="" class="btn btn-danger mb-3" data-toggle="modal" data-target="#newEmployeeModal">Tambah Data Karyawan</a>
                     		<table class="table table-hover"> 
   								<thead>
   	  								<tr>
       								<th scope="col">#</th>
                                     <th scope="col">Foto</th>
-      								<th scope="col">Name</th>
-                                    <th scope="col">Department</th>
-                                    <th scope="col">Age</th>
+      								<th scope="col">Nama</th>
+                                    <th scope="col">Departemen</th>
+                                    <th scope="col">Umur</th>
                                     <th scope="col">NIK</th>
-      								<th scope="col">Action</th>
+      								<th scope="col">Aksi</th>
     								</tr>
   								</thead>
   								<tbody>
@@ -36,8 +36,8 @@
                                     <td><?= $e['age']; ?></td>
                                     <td><?= $e['nik']; ?></td>
       								<td>
-      									<a href= "<?= base_url('employee/editemployee/') . $e['id']; ?>" class="badge badge-success">edit</a>
-      									<a href= "<?= base_url('employee/deleteEmployee/') . $e['id']; ?>" class="badge badge-danger" onclick="return confirm('Are you sure you want to delete this item?');">delete</a>
+      									<a href= "<?= base_url('employee/editemployee/') . $e['id']; ?>" class="badge badge-success">Ubah</a>
+      									<a href= "<?= base_url('employee/deleteEmployee/') . $e['id']; ?>" class="badge badge-danger" onclick="return confirm('Are you sure you want to delete this item?');">Hapus</a>
       								</td> 
     								</tr>
     								<?php $i++; ?>
@@ -64,15 +64,15 @@
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+                    <h5 class="modal-title" id="exampleModalLabel">Yakin Ingin Keluar ?</h5>
                     <button class="close" type="button" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">×</span>
                     </button>
                 </div>
-                <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+                <div class="modal-body">Pilih "Keluar" di bawah jika anda siap untuk mengakhiri sesi anda saat ini.</div>
                 <div class="modal-footer">
-                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                    <a class="btn btn-danger" href="<?= base_url('auth/logout'); ?>">Logout</a>
+                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Batal</button>
+                    <a class="btn btn-danger" href="<?= base_url('auth/logout'); ?>">Keluar</a>
                 </div>
             </div>
         </div>
@@ -83,7 +83,7 @@
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="newEmployeeModalLabel">Add New Employee</h5>
+        <h5 class="modal-title" id="newEmployeeModalLabel">Tambah Data Karyawan</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -91,7 +91,7 @@
       <form action="<?= base_url('employee'); ?>" method="post" enctype="multipart/form-data">
       <div class="modal-body">
         <div class="form-group">
-            <input type="file" class="form-control" id="foto" name="foto" placeholder="Choose File">
+            <input type="file" class="form-control" id="foto" name="foto" placeholder="Pilih File">
         </div>
           <div class="form-group">
     		 <input type="text" class="form-control" id="name" name="name" placeholder="Nama Karyawan">
@@ -156,8 +156,8 @@
   		  </div>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="submit" class="btn btn-danger">Add</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
+        <button type="submit" class="btn btn-danger">Tambah</button>
       </div>
       </form>
     </div>

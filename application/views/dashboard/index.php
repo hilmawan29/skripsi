@@ -11,9 +11,9 @@
                             <div class="card shadow mb-12">
                                 <!-- Card Header - Dropdown -->
                                 <div class="card-header py-3">
-                                    <h6 style="float: left;" class="m-0 font-weight-bold text-primary">Visitor Grafik</h6>
+                                    <h6 style="float: left;" class="m-0 font-weight-bold text-primary">Grafik Pengunjung</h6>
                                     <div style="float: right;">
-                                        <label>Select Month</label>
+                                        <label>Pilih Bulan</label>
                                         <input type="month" id="label" name="label" value="<?= $this->input->get('label')?>"> 
                                     </div>
                                     <div style="clear: both;"></div>
@@ -34,7 +34,7 @@
                                     </div>
 
                                     <div style="text-align: center;margin-top: 50px;"> 
-                                    Grafik in Month <b>PT. Yakjin Jaya Indonesia 2</b>
+                                    Grafik Bulan Ini <b>PT. Yakjin Jaya Indonesia 2</b>
                                     </div>
                                 </div>
                             </div>
@@ -59,15 +59,15 @@
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+                    <h5 class="modal-title" id="exampleModalLabel">Yakin Ingin Keluar ?</h5>
                     <button class="close" type="button" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">×</span>
                     </button>
                 </div>
-                <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+                <div class="modal-body">Pilih "Keluar" di bawah jika anda siap untuk mengakhiri sesi anda saat ini.</div>
                 <div class="modal-footer">
-                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                    <a class="btn btn-danger" href="<?= base_url('auth/logout'); ?>">Logout</a>
+                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Batal</button>
+                    <a class="btn btn-danger" href="<?= base_url('auth/logout'); ?>">Keluar</a>
                 </div>
             </div>
         </div>

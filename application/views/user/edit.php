@@ -16,14 +16,14 @@
                                     </div>
                                 </div>
                                 <div class="form-group row">
-                                    <label for="name" class="col-sm-2 col-form-label">Full name</label>
+                                    <label for="name" class="col-sm-2 col-form-label">Nama Lengkap</label>
                                     <div class="col-sm-10">
                                         <input type="text" class="form-control" id="name" name="name" value="<?= $user['name']; ?>">
                                         <?= form_error('name', '<small class="text-danger pl-3">', '</small>');?>
                                     </div>
                                 </div>
                                 <div class="form-group row">
-                                   <div class="col-sm-2">Picture</div>
+                                   <div class="col-sm-2 col-form-label">Foto</div>
                                    <div class="col-sm-10">
                                        <div class="row">
                                            <div class="col-sm-3">
@@ -32,7 +32,7 @@
                                            <div class="col-sm-9">
                                                <div class="custom-file">
                                                    <input type="file" class="custom-file-input" id="image" name="image">
-                                                   <label class="custom-file-label" for="image">Choose file</label>
+                                                   <label class="custom-file-label" for="image">Pilih Berkas</label>
                                                </div>
                                            </div>   
                                        </div>   
@@ -40,7 +40,7 @@
                                 </div>
                                 <div class="form-grup row justify-content-end">
                                     <div class="col-sm-10">
-                                        <button type="submit" class="btn btn-danger">Edit</button>
+                                        <button type="submit" class="btn btn-danger">Ubah</button>
                                     </div>
                                 </div>
                             </form>
@@ -65,15 +65,15 @@
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+                    <h5 class="modal-title" id="exampleModalLabel">Yakin Ingin Keluar ?</h5>
                     <button class="close" type="button" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">×</span>
                     </button>
                 </div>
-                <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+                <div class="modal-body">Pilih "Keluar" di bawah jika anda siap untuk mengakhiri sesi anda saat ini.</div>
                 <div class="modal-footer">
-                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                    <a class="btn btn-danger" href="<?= base_url('auth/logout'); ?>">Logout</a>
+                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Batal</button>
+                    <a class="btn btn-danger" href="<?= base_url('auth/logout'); ?>">Keluar</a>
                 </div>
             </div>
         </div>

@@ -9,7 +9,7 @@
     		<?= form_error('menu', '<div class="alert alert-danger" role="alert">','</div>'); ?>
     		<?= $this->session->flashdata('message'); ?>
             <div>
-                <label>Select Date</label>
+                <label>Pilih Tanggal</label>
                 <input type="date" id="start_date" name="start_date" value="<?= $this->input->get('start_date')
              ?>"> - <input type="date" id="end_date" name="end_date" value="<?= $this->input->get('end_date')
              ?>"> 
@@ -20,18 +20,18 @@
 					<thead>
 						<tr>
 						<th scope="col"><input type="checkbox" id="select_all_patient" name="select_all_patient" value=""></th>
-						<th scope="col">Date</th>
-						<th scope="col">Name</th>
-						<th scope="col">Department</th>
-						<th scope="col">Diagnosis</th>
-						<th scope="col">Drugs</th>
+						<th scope="col">Tanggal</th>
+						<th scope="col">Nama</th>
+						<th scope="col">Departemen</th>
+						<th scope="col">Diagnosa</th>
+						<th scope="col">Obat</th>
 						<th scope="col"><?php 
                             if ($user ['role_id'] == 1){
-								echo "Conclusion";                            	
+								echo "Hasil";                            	
                             }elseif ($user ['role_id'] == 3){
-                            	 echo "Conclusion From Dokter";
+                            	 echo "Hasil Dari Dokter";
                             } ?></th>
-                    <th scope="col">Action</th>
+                    <th scope="col">Aksi</th>
                     </tr>
 					</thead>
 					<tbody>
@@ -56,15 +56,15 @@
                             	} ?>
                         	</td>
 							<td>
-								<a href= "<?= base_url('diagnosa/editpat/') . $p['id']; ?>" class="badge badge-success">edit</a>
-								<a href= "<?= base_url('diagnosa/detailpat/') . $p['id']; ?>" class="badge badge-warning">detail</a>
+								<a href= "<?= base_url('diagnosa/editpat/') . $p['id']; ?>" class="badge badge-success">Ubah</a>
+								<a href= "<?= base_url('diagnosa/detailpat/') . $p['id']; ?>" class="badge badge-warning">Detail</a>
 							</td> 
 					</tr>
 					<?php $i++; ?>
 					<?php endforeach; ?>
 					</tbody>
 				</table>
-            <button type="submit" class="btn btn-danger">Download Data</button>
+            <button type="submit" class="btn btn-danger">Unduh Data</button>
                 
                 </form>
     	</div>

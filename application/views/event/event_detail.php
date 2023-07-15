@@ -40,10 +40,10 @@
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div class="navbar-nav ms-auto">
           <a class="nav-link active" aria-current="page" href="<?= base_url('landing')?>">Home</a>
-          <a class="nav-link" href="<?= base_url('landing/artikel')?>">Article</a>
+          <a class="nav-link" href="<?= base_url('landing/artikel')?>">Artikel</a>
           <a class="nav-link" href="<?= base_url('landing/event')?>">Event</a>
           <a class="nav-link" href="http://www.yakjin.com/">Yakjin</a>
-          <a class="btn btn-danger tombol" href="<?= base_url('auth')?>">Sign up</a>
+          <a class="btn btn-danger tombol" href="<?= base_url('auth')?>">Masuk</a>
           </div>
         </div>
       </div>
@@ -78,10 +78,10 @@
         <header class="header-about">
           <main class="main-body">
             <article class="card">
-              <h2 class="h2-event">Hello Everyone !!!</h2>
+              <h2 class="h2-event">Hallo !!!</h2>
               <p class="p-event"><font size="+2"<?php echo $event['deskripsi']; ?></font></p>
           
-              <h2 class="h2-event">Mark Your Calender !!!</h2>
+              <h2 class="h2-event">Tandai Kalender Kamu</h2>
               <p class="p-event">
                <i class="fa fa-calendar-alt" aria-hidden="true"></i> <?= date('d F Y', strtotime($event['tanggal'])); ?> <br>
                <i class="fa fa-map-marker-alt" aria-hidden="true"> </i> <?php echo $event['lokasi']; ?>  

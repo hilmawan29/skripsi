@@ -38,10 +38,10 @@
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div class="navbar-nav ms-auto">
           <a class="nav-link active" aria-current="page" href="<?= base_url('landing')?>">Home</a>
-          <a class="nav-link" href="<?= base_url('landing/artikel')?>">Article</a>
+          <a class="nav-link" href="<?= base_url('landing/artikel')?>">Artikel</a>
           <a class="nav-link" href="<?= base_url('landing/event')?>">Event</a>
           <a class="nav-link" href="http://www.yakjin.com/">Yakjin</a>
-          <a class="btn btn-danger tombol" href="<?= base_url('auth')?>">Sign up</a>
+          <a class="btn btn-danger tombol" href="<?= base_url('auth')?>">Masuk</a>
           </div>
         </div>
       </div>

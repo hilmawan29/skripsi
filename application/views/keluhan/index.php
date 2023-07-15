@@ -10,9 +10,9 @@
     	<div class="col-lg">
     		<?= form_error('menu', '<div class="alert alert-danger" role="alert">','</div>'); ?>
     		<?= $this->session->flashdata('message'); ?>
-    		<a href="" class="btn btn-danger mb-3" data-toggle="modal" data-target="#newInputDataModal1">Add New Data</a>
+    		<a href="" class="btn btn-danger mb-3" data-toggle="modal" data-target="#newInputDataModal1">Tambah Data Baru</a>
             <div>
-                <label>Select Date</label>
+                <label>Pilih Tanggal</label>
                 <input type="date" id="start_date" name="start_date" value="<?= $this->input->get('start_date')
              ?>"> - <input type="date" id="end_date" name="end_date" value="<?= $this->input->get('end_date')
              ?>"> 
@@ -23,13 +23,13 @@
 					<thead>
 						<tr>
 						<th scope="col"><input type="checkbox" id="select_all_patient" name="select_all_patient" value=""></th>
-						<th scope="col">Date</th>
-						<th scope="col">Name</th>
-						<th scope="col">Department</th>
+						<th scope="col">Tanggal</th>
+						<th scope="col">Nama</th>
+						<th scope="col">Departemen</th>
 						<th scope="col">Keluhan</th>
 						<!-- <th scope="col">Drugs</th> -->
 						<!-- <th scope="col">Conclusion</th> -->
-                    <th scope="col">Action</th>
+                    <th scope="col">Aksi</th>
                     </tr>
 					</thead>
 					<tbody>
@@ -44,16 +44,16 @@
 							<!-- <td><?= myTruncate2($p['drugs'], 10); ?></td> -->
                             <!-- <td><?= $p['conclusion']; ?></td> -->
 							<td>
-								<a href= "<?= base_url('keluhan/editpat/') . $p['id']; ?>" class="badge badge-success">edit</a>
-								<a href= "<?= base_url('keluhan/deletepat/') . $p['id']; ?>" class="badge badge-danger" onclick="return confirm('Are you sure you want to delete this item?');">delete</a>
-                                <a href= "<?= base_url('keluhan/detailpat/') . $p['id']; ?>" class="badge badge-warning">detail</a>
+								<a href= "<?= base_url('keluhan/editpat/') . $p['id']; ?>" class="badge badge-success">Ubah</a>
+								<a href= "<?= base_url('keluhan/deletepat/') . $p['id']; ?>" class="badge badge-danger" onclick="return confirm('Are you sure you want to delete this item?');">Hapus</a>
+                                <a href= "<?= base_url('keluhan/detailpat/') . $p['id']; ?>" class="badge badge-warning">Detail</a>
 							</td> 
 					</tr>
 					<?php $i++; ?>
 					<?php endforeach; ?>
 					</tbody>
 				</table>
-            <button type="submit" class="btn btn-danger">Download Data</button>
+            <button type="submit" class="btn btn-danger">Unduh Data</button>
                 
                 </form>
     	</div>
@@ -72,30 +72,30 @@
 
 <!-- Logout Modal-->
 <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-    aria-hidden="true">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
-                <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">×</span>
-                </button>
-            </div>
-            <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
-            <div class="modal-footer">
-                <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                <a class="btn btn-danger" href="<?= base_url('auth/logout'); ?>">Logout</a>
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Yakin Ingin Keluar ?</h5>
+                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">Pilih "Keluar" di bawah jika anda siap untuk mengakhiri sesi anda saat ini.</div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Batal</button>
+                    <a class="btn btn-danger" href="<?= base_url('auth/logout'); ?>">Keluar</a>
+                </div>
             </div>
         </div>
     </div>
-</div>
 
 <!-- Modal 1 -->
 <div class="modal fade" id="newInputDataModal1" tabindex="-1" role="dialog" aria-labelledby="newInputDataModal" aria-hidden="true">
 <div class="modal-dialog" role="document">
 <div class="modal-content">
   <div class="modal-header">
-    <h5 class="modal-title" id="newInputDataModalLabel1">Add New Data</h5>
+    <h5 class="modal-title" id="newInputDataModalLabel1">Tambah Data Baru</h5>
     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
       <span aria-hidden="true">&times;</span>
     </button>
@@ -107,8 +107,8 @@
       </div>
   </div>
   <div class="modal-footer">
-    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-    <button type="submit" class="btn btn-danger" id="button-next">Next</button>
+    <button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
+    <button type="submit" class="btn btn-danger" id="button-next">Lanjut</button>
   </div>
   </form>
 </div>
@@ -120,7 +120,7 @@
 <div class="modal-dialog" role="document">
 <div class="modal-content">
   <div class="modal-header">
-    <h5 class="modal-title" id="newInputDataModalLabel">Add New Data</h5>
+    <h5 class="modal-title" id="newInputDataModalLabel">Tambah Data Karyawan</h5>
     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
       <span aria-hidden="true">&times;</span>
     </button>
@@ -160,8 +160,8 @@
       </div>
   </div>
   <div class="modal-footer">
-    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-    <button type="submit" class="btn btn-danger">Send</button>
+    <button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
+    <button type="submit" class="btn btn-danger">Kirim</button>
   </div>
   </form>
 </div>

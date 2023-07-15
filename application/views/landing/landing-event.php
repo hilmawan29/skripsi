@@ -40,10 +40,10 @@
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div class="navbar-nav ms-auto">
           <a class="nav-link active" aria-current="page" href="<?= base_url('landing')?>">Home</a>
-          <a class="nav-link" href="<?= base_url('landing/artikel')?>">Article</a>
+          <a class="nav-link" href="<?= base_url('landing/artikel')?>">Artikel</a>
           <a class="nav-link" href="<?= base_url('landing/event')?>">Event</a>
           <a class="nav-link" href="http://www.yakjin.com/">Yakjin</a>
-          <a class="btn btn-danger tombol" href="<?= base_url('auth')?>">Sign up</a>
+          <a class="btn btn-danger tombol" href="<?= base_url('auth')?>">Masuk</a>
           </div>
         </div>
       </div>
@@ -71,7 +71,7 @@
              <i class="fa fa-calendar-alt" aria-hidden="true"></i> <?= date('d F Y', strtotime($event['tanggal'])); ?> <br>
              <i class="fa fa-map-marker-alt" aria-hidden="true"> </i> <?php echo $event['lokasi']; ?>  
             <br><br>
-				    <a href="<?= base_url('landing/event_detail/'.$event['id'])?>" class="btn btn-danger tombol">Click Here</a>
+				    <a href="<?= base_url('landing/event_detail/'.$event['id'])?>" class="btn btn-danger tombol">Klik Disini</a>
 				  </div>
 				</div>
 			</div>

@@ -38,10 +38,10 @@
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div class="navbar-nav ms-auto">
           <a class="nav-link active" aria-current="page" href="<?= base_url('landing')?>">Home</a>
-          <a class="nav-link" href="<?= base_url('landing/artikel')?>">Article</a>
+          <a class="nav-link" href="<?= base_url('landing/artikel')?>">Artikel</a>
           <a class="nav-link" href="<?= base_url('landing/event')?>">Event</a>
           <a class="nav-link" href="http://www.yakjin.com/">Yakjin</a>
-          <a class="btn btn-danger tombol" href="<?= base_url('auth')?>">Sign up</a>
+          <a class="btn btn-danger tombol" href="<?= base_url('auth')?>">Masuk</a>
           </div>
         </div>
       </div>
@@ -66,8 +66,8 @@
 				  <img src="<?php echo base_url("assets/image/$gambar"); ?>" width='100' height='200' class="card-img-top" alt="<?php echo $artikel['judul']; ?>">
 				  <div class="card-body">
 				    <h5 class="card-title"><?php echo $artikel['judul']; ?></h5>
-				    <p class="card-text">Source : Halodc.com</p>
-				    <a href="<?= base_url('landing/artikel_detail/'.$artikel['id'])?>" class="btn btn-danger tombol">Click Here</a>
+				    <p class="card-text"><?php echo $artikel['sumber']; ?></p>
+				    <a href="<?= base_url('landing/artikel_detail/'.$artikel['id'])?>" class="btn btn-danger tombol">Klik Disini</a>
 				  </div>
 				</div>
 			</div>

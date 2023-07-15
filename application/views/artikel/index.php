@@ -9,7 +9,7 @@
                 <?php echo validation_errors(); ?>
         		<?= form_error('menu', '<div class="alert alert-danger" role="alert">','</div>'); ?>
         		<?= $this->session->flashdata('message'); ?>
-        		<a href="" class="btn btn-danger mb-3" data-toggle="modal" data-target="#newArtikelModal">Add New Artikel</a>
+        		<a href="" class="btn btn-danger mb-3" data-toggle="modal" data-target="#newArtikelModal">Tambah Artikel</a>
         		<table class="table table-hover"> 
 						<thead>
     						<tr>
@@ -18,7 +18,7 @@
         						<th scope="col">Deskripsi</th>
                                 <th scope="col">Sumber</th>
                                 <th scope="col">Gambar</th>
-        						<th scope="col">Action</th>
+        						<th scope="col">Aksi</th>
     						</tr>
 						</thead>
 						<tbody>
@@ -33,8 +33,8 @@
                             <img src="<?php echo "assets/image/".$a['gambar']; ?>" width='100' height='120'>";
                         <?php } ?></td>
 							<td>
-								<a href= "<?= base_url('artikel/edit_artikel/') . $a['id']; ?>" class="badge badge-success">edit</a>
-								<a href= "<?= base_url('artikel/delete_artikel/') . $a['id']; ?>" class="badge badge-danger" onclick="return confirm('Are you sure you want to delete this item?');">delete</a>
+								<a href= "<?= base_url('artikel/edit_artikel/') . $a['id']; ?>" class="badge badge-success">Ubah</a>
+								<a href= "<?= base_url('artikel/delete_artikel/') . $a['id']; ?>" class="badge badge-danger" onclick="return confirm('Are you sure you want to delete this item?');">Hapus</a>
 							</td> 
 						</tr>
 						<?php $i++; ?>
@@ -61,15 +61,15 @@
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+                    <h5 class="modal-title" id="exampleModalLabel">Yakin Ingin Keluar ?</h5>
                     <button class="close" type="button" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">×</span>
                     </button>
                 </div>
-                <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+                <div class="modal-body">Pilih "Keluar" di bawah jika anda siap untuk mengakhiri sesi anda saat ini.</div>
                 <div class="modal-footer">
-                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                    <a class="btn btn-danger" href="<?= base_url('auth/logout'); ?>">Logout</a>
+                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Batal</button>
+                    <a class="btn btn-danger" href="<?= base_url('auth/logout'); ?>">Keluar</a>
                 </div>
             </div>
         </div>
@@ -80,7 +80,7 @@
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="newArtikelModalLabel">Add New Artikel</h5>
+        <h5 class="modal-title" id="newArtikelModalLabel">Tambah Artikel</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -97,12 +97,12 @@
              <input type="text" class="form-control" id="sumber" name="sumber" placeholder="Sumber">
           </div>
           <div class="form-group">
-            <input type="file" class="form-control" id="foto" name="foto" placeholder="Choose File">
+            <input type="file" class="form-control" id="foto" name="foto" placeholder="Pilih File">
         </div>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="submit" class="btn btn-danger">Add</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
+        <button type="submit" class="btn btn-danger">Tambah</button>
       </div>
       </form>
     </div>

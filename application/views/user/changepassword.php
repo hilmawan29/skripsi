@@ -11,22 +11,22 @@
                             <?= $this->session->flashdata('message'); ?>
                             <form action="<?= base_url('user/changepassword'); ?>" method="post">
                                 <div class="form-group">
-                                    <label for="current_password">Current Password</label>
+                                    <label for="current_password">Password Saat Ini</label>
                                     <input type="password" class="form-control" id="current_password" name="current_password">
                                     <?= form_error('current_password', '<small class="text-danger pl-3">', '</small>');?>
                                 </div>
                                 <div class="form-group">
-                                    <label for="new_password1">New Password</label>
+                                    <label for="new_password1">Password Baru</label>
                                     <input type="password" class="form-control" id="new_password1" name="new_password1">
                                     <?= form_error('new_password1', '<small class="text-danger pl-3">', '</small>');?>
                                 </div>
                                 <div class="form-group">
-                                    <label for="new_password2">Repeat Password</label>
+                                    <label for="new_password2">Ulangi Password</label>
                                     <input type="password" class="form-control" id="new_password2" name="new_password2">
                                     <?= form_error('new_password2', '<small class="text-danger pl-3">', '</small>');?>
                                 </div>
                                 <div class="form-group">
-                                    <button type="submit" class="btn btn-danger">Change Password</button>
+                                    <button type="submit" class="btn btn-danger">Ubah Password</button>
                                 </div>
                             </form>
                         </div>
@@ -49,15 +49,15 @@
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+                    <h5 class="modal-title" id="exampleModalLabel">Yakin Ingin Keluar ?</h5>
                     <button class="close" type="button" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">×</span>
                     </button>
                 </div>
-                <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+                <div class="modal-body">Pilih "Keluar" di bawah jika anda siap untuk mengakhiri sesi anda saat ini.</div>
                 <div class="modal-footer">
-                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                    <a class="btn btn-danger" href="<?= base_url('auth/logout'); ?>">Logout</a>
+                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Batal</button>
+                    <a class="btn btn-danger" href="<?= base_url('auth/logout'); ?>">Keluar</a>
                 </div>
             </div>
         </div>
