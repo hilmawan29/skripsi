@@ -20,7 +20,7 @@ class Patient_model extends CI_Model {
 				 ";
 				 return $this->db->query($query)->row_array();
 	} 
-
+ 
 	public function select_all_by_date($start_date, $end_date) {
 		$query = "SELECT `patient`.*, `employee`. `name`, `employee`. `department`  
 				  FROM `patient` JOIN `employee`

@@ -5,6 +5,7 @@ class keluhan extends CI_Controller {
 	public function __construct() {
 		parent :: __construct();
 		is_logged_in();
+		$this->load->library('form_validation');
 		$this->load->model('User_model', 'user');
 		$this->load->model('Admin_model', 'admin');
 		$this->load->model('Employee_model', 'employee');
@@ -71,28 +72,20 @@ class keluhan extends CI_Controller {
 
         $this->form_validation->set_rules('check_in', 'Check in', 'required');
 		$this->form_validation->set_rules('check_out', 'Check out', 'required');
-        $this->form_validation->set_rules('jenis_sakit', 'Jenis sakit', 'required');
-		$this->form_validation->set_rules('diagnosis', 'Diagnosis', 'required');
-		$this->form_validation->set_rules('drugs', 'Drugs', 'required');
-		$this->form_validation->set_rules('conclusion', 'Conclusion', 'required');
 
-        if ($this->form_validation->run() == false) {
+        if ($this->form_validation->run() == FALSE) {
             $this->load->view('templates/header', $data);
             $this->load->view('templates/sidebar', $data);
             $this->load->view('templates/topbar', $data);
             $this->load->view('keluhan/editpat', $data);
             $this->load->view('templates/footer', $data);
         } else {
-            $patient_name = $this->input->post('title');
             $data_pat = [
                 'check_in' => $this->input->post('check_in'),
                 'check_out' => $this->input->post('check_out'),
-                'jenis_sakit' => $this->input->post('jenis_sakit'),
-                'diagnosis' => $this->input->post('diagnosis'),
-                'drugs' => $this->input->post('drugs'),
-                'conclusion' => $this->input->post('conclusion')
 
             ];
+
             $this->db->set($data_pat);
             $this->db->where('id', $patient_id);
             $this->db->update('patient');

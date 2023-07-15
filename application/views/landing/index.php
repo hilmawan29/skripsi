@@ -31,17 +31,17 @@
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-light">
       <div class="container-fluid">
-        <a class="navbar-brand" href="home.php"><img src="assets/image/logo.png" height="25 px"> Yakjin Clinic<h1>Changing for the Better - Be F.I.T.</h1></a>
+        <a class="navbar-brand" href="<?= base_url('landing')?>"><img src="<?php echo base_url("assets/image/logo.png"); ?>" height="25 px"> Yakjin Clinic<h1>Changing for the Better - Be F.I.T.</h1></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div class="navbar-nav ms-auto">
-          <a class="nav-link active" aria-current="page" href="home.php">Home</a>
-          <a class="nav-link" href="artikel.php">Article</a>
-          <a class="nav-link" href="event.php">Event</a>
+          <a class="nav-link active" aria-current="page" href="<?= base_url('landing')?>">Home</a>
+          <a class="nav-link" href="<?= base_url('landing/artikel')?>">Article</a>
+          <a class="nav-link" href="<?= base_url('landing/event')?>">Event</a>
           <a class="nav-link" href="http://www.yakjin.com/">Yakjin</a>
-          <a class="btn btn-danger tombol" href="<?= base_url('auth')?>"> Log In</a>
+          <a class="btn btn-danger tombol" href="<?= base_url('auth')?>">Sign up</a>
           </div>
         </div>
       </div>
@@ -71,12 +71,13 @@
               <p>Mrs. Rikrik Trisno Sugiarti A.Md. Per.</p></div>
           </div>
           <div class="col">
-            <div class="p-3"><img src="assets/image/home/list.jpg" class="utama" alt="List" height="100px">
+            <a href="<?= base_url('auth')?>">
+            <div class="p-3"><img src="assets/image/home/list.jpg" class="utama" alt="List" height="80px">
               <h4 class="utama">Check Up</h4>
               <p>For You </p></div>
             </div>
           <div class="col">
-            <a href="about.php">
+            <a href="http://www.yakjin.com/">
             <div class="p-3"><img src="assets/image/home/gedung.png" alt="Gedung" height="80px"></a>
               <h4>About</h4>
               <p>PT.Yakjin Jaya Indonesia 2</p></div>
@@ -101,10 +102,15 @@
                       $active = "active";  
                     }
                     $gambar = $artikel['gambar'];
+                    if ($gambar != NULL) {
+                      // code...
+                    
                 ?>
                      
                   <div class="carousel-item <?php echo $active; ?>">
-                    <img src='<?php echo "assets/image/$gambar"; ?>' height="650px" class="d-block w-100" alt="<?php echo $artikel['judul']; ?>">
+                    <a href="<?= base_url('landing/artikel')?>">
+                    <img src='<?php echo "assets/image/$gambar"; ?>' height="650px" class="d-block w-100 rounded-rectangle" alt="<?php echo $artikel['judul']; ?>">
+                    </a>
                     <div class="carousel-caption d-none d-md-block">
                       <?php 
                         $maxLength = 50;
@@ -119,7 +125,7 @@
                       <p><?php echo $simple_desc; ?></p>
                     </div>
                   </div>
-                <?php } ?>
+                <?php } }?>
               </div>
               <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -161,11 +167,13 @@
         </section>
         <!-- akhir Testimonial -->
         <!-- Footer -->
-        <div class="row footer">
-          <div class="col text-center">
-           <p>Copyright&#169;2022, PT.Yakjin Jaya Indonesia 2. All rights reserved by Hilman.</p>
-          </div>
+    <div class="row footer">
+      <div class="col text-center ">
+        <div class="copyright text-center my-auto" style="font-weight: bold; font-size: 15px;  ">
+       <span>Copyright &copy; Yakjin Clinic <?= date('Y'); ?></span>
         </div>
+      </div>
+    </div>
         <!-- akhir Footer -->
     </div>
     <!-- akhir Container -->

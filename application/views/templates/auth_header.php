@@ -28,4 +28,4 @@
 
 </head>
 
-<body class="bg-gradient-danger">
+<body>

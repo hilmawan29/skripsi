@@ -12,7 +12,7 @@
             <?= form_error('keluhan', '<small class="text-danger pl-3">', '</small>'); ?>
         </div>
         <div class="form-group">
-            <label for="diagnosis">Hasil Observasi</label>
+            <label for="diagnosis">Tindakan Medis</label>
             <textarea name="diagnosis" class="form-control" id="diagnosis"></textarea>
             <?= form_error('diagnosis', '<small class="text-danger pl-3">', '</small>'); ?>
     	</div>

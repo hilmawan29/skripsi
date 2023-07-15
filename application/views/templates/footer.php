@@ -19,6 +19,23 @@
 
     <!-- Custom scripts for all pages-->
     <script src="<?= base_url('assets'); ?>/js/sb-admin-2.min.js"></script>
+
+    <!-- Script -->
+    <script type="text/javascript">
+        $('#select_all_patient').click(function(event) {   
+        if(this.checked) {
+            // Iterate each checkbox
+            $(':checkbox').each(function() {
+                this.checked = true;                        
+            });
+        } else {
+            $(':checkbox').each(function() {
+                this.checked = false;                       
+            });
+            }
+        }); 
+    </script>
+    
    <script>
     $('.custom-file-input').on('change', function() {
         let fileName = $(this).val().split('\\').pop();

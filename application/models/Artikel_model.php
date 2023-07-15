@@ -4,10 +4,16 @@ defined('BASEPATH') or exit('No direct script access allowed');
 class Artikel_model extends CI_Model
 {
 	public function select_all($limit) {
-		$query = "SELECT `artikel`. `id`,`artikel`. `judul`, `artikel`. `deskripsi`, `artikel`. `sumber`, `artikel`. `gambar`
-				  FROM `artikel` LIMIT $limit
-				 ";
-				 return $this->db->query($query)->result_array(); 
+		if ($limit == "all" ) {
+			$query = "SELECT `artikel`. `id`,`artikel`. `judul`, `artikel`. `deskripsi`, `artikel`. `sumber`, `artikel`. `gambar`
+				  FROM `artikel`
+				 ";	
+		}else{
+			$query = "SELECT `artikel`. `id`,`artikel`. `judul`, `artikel`. `deskripsi`, `artikel`. `sumber`, `artikel`. `gambar`
+					  FROM `artikel` LIMIT $limit
+					 ";
+		}
+			return $this->db->query($query)->result_array(); 
 	}
 
 	public function delete($id) {
@@ -21,6 +27,7 @@ class Artikel_model extends CI_Model
 	}
 
 	public function create($data){
+	var_dump($data);
 	$this->db->insert('artikel', $data);
 	}
 
@@ -28,6 +35,6 @@ class Artikel_model extends CI_Model
 		$query = "SELECT `artikel`. `id`,`artikel`. `judul`, `artikel`. `deskripsi`, `artikel`. `sumber`, `artikel`. `gambar`
 				  FROM `artikel` WHERE `id` = $id
 				 ";
-				 return $this->db->query($query)->row();
+				 return $this->db->query($query)->row_array();
 	}
 }

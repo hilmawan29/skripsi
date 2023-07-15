@@ -11,7 +11,7 @@
             <?php $exampleDate = $patient['check_in'];
             $newDate = date('Y-m-d\TH:i', strtotime($exampleDate)); ?>
             <input type="datetime-local" class="form-control" id="check_in" name="check_in" value="<?= $newDate; ?>">
-            <?= form_error('check_in', '<small class="text-danger pl-3">', '</small>'); ?>
+            <?= form_error('check_in', '<small class="text-danger">', '</small>') ?>
         </div>
         <div class="form-group">
             <label for="check_out">Jam Keluar</label>
@@ -20,9 +20,8 @@
         </div>
         <div class="form-group">
             <label for="keluhan">Keluhan Pasien</label>
-            <textarea name="keluhan" class="form-control" id="keluhan" rows="5"><?= $patient['keluhan']; ?></textarea>
-            <?= form_error('keluhan', '<small class="text-danger pl-3">', '</small>'); ?>
+            <textarea name="keluhan" class="form-control" id="keluhan" rows="5" disabled><?= $patient['keluhan']; ?></textarea>
         </div>
     <button type="submit" class="btn btn-danger">Update Patient Data</button>
-    </form>
-</div>
+    <?= form_close(); ?>
+</div>  
